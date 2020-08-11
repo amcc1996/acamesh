@@ -75,7 +75,7 @@ with open(title + ".dat", "w") as dat:
     dat.write("\n\nDYNAMICS ON")
     dat.write("\n\nMASS_MATRIX CONSISTENT")
     dat.write("\n\nINTEGRATOR NEWMARK")
-    dat.write("\n\nDAMPING_MATRIX NONE")
+    dat.write("\n\nDAMPING_MATRIX RAYLEIGH")
     dat.write("\n\nRAYLEIGH_DAMPING\n0.5 0.5")
     dat.write("\n\nCONTACT ON")
     dat.write("\n\nTANGENTIAL_CONTACT FRICTIONLESS")
