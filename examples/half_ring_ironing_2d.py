@@ -88,15 +88,15 @@ with open(title + ".dat", "w") as dat:
     dat.write("\n\nSTEP_1")
     dat.write("\n\nINCREMENTS 10")
     dat.write("\n10")
-    dat.write("\n 0.1 1e-6 15")
+    dat.write("\n 1e-1 1e-6 15")
     dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nFIXED".format(len(bot_2)))
     for i in bot_2:
         dat.write("\n{0} 11 0.0 0.0 0.0".format(i))
-    dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nLINEAR\n0 -1.4".format(len(start_1) + len(end_1)))
+    dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nLINEAR\n0".format(len(start_1) + len(end_1)))
     for i in start_1:
-        dat.write("\n{0} 01 0.0 0.0 0.0".format(i))
+        dat.write("\n{0} 01 0.0 -1.4e0 0.0".format(i))
     for i in end_1:
-        dat.write("\n{0} 01 0.0 0.0 0.0".format(i))
+        dat.write("\n{0} 01 0.0 -1.4e0 0.0".format(i))
     dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nFIXED".format(len(start_1) + len(end_1)))
     for i in start_1:
         dat.write("\n{0} 10 0.0 0.0 0.0".format(i))
@@ -109,11 +109,11 @@ with open(title + ".dat", "w") as dat:
     dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nFIXED".format(len(bot_2)))
     for i in bot_2:
         dat.write("\n{0} 11 0.0 0.0 0.0".format(i))
-    dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nLINEAR\n1 4".format(len(start_1) + len(end_1)))
+    dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nLINEAR\n0".format(len(start_1) + len(end_1)))
     for i in start_1:
-        dat.write("\n{0} 10 0.0 0.0 0.0".format(i))
+        dat.write("\n{0} 10 4.0 0.0 0.0".format(i))
     for i in end_1:
-        dat.write("\n{0} 10 0.0 0.0 0.0".format(i))
+        dat.write("\n{0} 10 4.0 0.0 0.0".format(i))
     dat.write("\n\nNODES_WITH_PRESCRIBED_DISPLACEMENTS {0}\nUNIFORM".format(len(start_1) + len(end_1)))
     for i in start_1:
         dat.write("\n{0} 01 0.0 -1.4 0.0".format(i))
